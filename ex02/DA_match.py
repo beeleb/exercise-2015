@@ -28,6 +28,8 @@ def DA(a, b):
                         m_engage[f_engage[proposed]] = -1
                         m_engage[proposing] = proposed
                         f_engage[proposed] = proposing
-
-            
-    return m_engage 
+                        
+    for i in range(m):
+        if f_engage[i] == -1:
+            f_engage[i] = n
+    return m_engage , f_engage
